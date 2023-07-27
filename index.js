@@ -69,3 +69,20 @@ const findTwoNumbers = (sortedArr, target) => {
   
     return [];
   };
+
+//   Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+
+const simpleCalculator = (input1, operator, input2) => {
+    switch (operator) {
+      case '+':
+        return input1 + input2;
+      case '-':
+        return input1 - input2;
+      case '*':
+        return input1 * input2;
+      case '/':
+        return input1 / input2;
+      default:
+        return "Invalid operator";
+    }
+  };
