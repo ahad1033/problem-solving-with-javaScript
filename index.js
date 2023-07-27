@@ -137,3 +137,29 @@ const romanNumeralToInteger = (romanNumeral) => {
   
     return integer;
   };
+
+//   Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
+
+const findSecondSmallestNumber = (arr) => {
+    if (arr.length < 2) {
+      return "The input should contain at least two elements";
+    }
+  
+    let smallest = Infinity;
+    let secondSmallest = Infinity;
+  
+    for (let num of arr) {
+      if (num < smallest) {
+        secondSmallest = smallest;
+        smallest = num;
+      } else if (num < secondSmallest && num !== smallest) {
+        secondSmallest = num;
+      }
+    }
+  
+    if (secondSmallest === Infinity) {
+      return "There is no second smallest element in the array";
+    }
+  
+    return secondSmallest;
+  };
